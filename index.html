@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup with OTP</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sender">
+            <input type="text" id="number" placeholder="+91...">
+            <div id="recaptcha-container"></div>
+            <input type="button" id="send" value="Send" onClick="phoneAuth()">
+        </div>
+        <div id="verifier" style="display:none">
+            <input type="text" id="verificationcode" placeholder="OTP Code">
+            <input type="button" id="verify" value="Verify" onClick="codeverify()">
+            <div class="p-conf">Number Verified</div>
+            <div class="n-conf">OTP ERROR</div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

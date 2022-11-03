@@ -5,9 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup with OTP</title>
-    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+    <script>
+        const {phoneAuth} = require("/services/phoneAuth") ;
+        const {codeVerify} = require("/services/codeVerify") ;
+    </script>
     <div class="container">
         <div class="sender">
             <input type="text" id="number" placeholder="+91...">
@@ -16,7 +20,7 @@
         </div>
         <div id="verifier" style="display:none">
             <input type="text" id="verificationcode" placeholder="OTP Code">
-            <input type="button" id="verify" value="Verify" onclick="codeverify()">
+            <input type="button" id="verify" value="Verify" onclick="codeVerify()">
             <div class="p-conf">Number Verified</div>
             <div class="n-conf">OTP ERROR</div>
         </div>

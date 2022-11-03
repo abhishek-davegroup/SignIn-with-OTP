@@ -15,4 +15,4 @@ function phoneAuth() {
     })
 }
 
-module.exports = phoneAuth()
+module.exports.phoneAuth = phoneAuth()

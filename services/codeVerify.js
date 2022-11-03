@@ -12,4 +12,4 @@ function codeVerify(){
     })
 }
 
-module.exports = codeVerify()
+module.exports.codeVerify = codeVerify()

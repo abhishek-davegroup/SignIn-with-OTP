@@ -5,16 +5,14 @@ const express = require('express')
 const app = express()
 
 app.get('/', (req, res) => {
-    res.sendStatus(200)
+    res.sendStatus(200).send('Hello World')
 })
 
-//Adding Signup page
+// //Adding Signup page
 app.get('/signup', (req, res) => {
     res.sendFile(__dirname + '/index.html')
 })
 
-// Getting the port to listen on
-// const port = process.env.APP_PORT;
 
 function render() {
     window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container')

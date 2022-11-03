@@ -2,7 +2,7 @@
 
 const express = require('express') 
 
-import {initializeApp} from 'firebase/app'
+import {initializeApp} from "firebase/app"
 import { getAnalytics } from "firebase/analytics"
 
 // Add Firebase SDK 
